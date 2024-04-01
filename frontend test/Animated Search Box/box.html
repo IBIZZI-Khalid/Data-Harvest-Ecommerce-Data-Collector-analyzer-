@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="box.css">
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+</head>
+<body>
+
+  <div class="search-wrapper">
+    <div class="input-holder">
+      <input type="text" class="search-input" placeholder="Type to search" />
+      <button class="search-icon" onclick="searchToggle(this, event);"><span></span></button>
+    </div>
+    <span class="close" onclick="searchToggle(this, event);"></span>
+  </div>
+
+
+  <script>
+    function searchToggle(obj, event) {
+      var container = $(obj).closest('.search-wrapper');
+      if (!container.hasClass('active')) {
+        container.addClass('active');
+        event.preventDefault(); // Prevent default button action (if applicable)
+      } else if (container.hasClass('active') && $(obj).closest('.input-holder').length === 0) {
+        container.removeClass('active');
+        // clear input
+        container.find('.search-input').val('');
+      }
+    }
+  </script>
+
+</body>
+</html>
