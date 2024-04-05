@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import axios from 'axios';
 import { Navigate } from 'react-router-dom';
 import './styles/DivbdSearPRod.css'; // Import the CSS file
+import Loader from './Loader';
 
 
 function DivbdSearPRod() {
@@ -60,6 +61,7 @@ function DivbdSearPRod() {
     }
 
     return(
+        <div className='parentdiv' >
         <div className="divSearchPro">
             {/* {redirect && <Navigate to="/scrapage" />} Navigate conditionnelle */}
             {redirect && (
@@ -77,7 +79,8 @@ function DivbdSearPRod() {
                         <span>Search</span>
                     </button>
                 </form>   
-                {loading && <p>Loading...</p>} {/* Afficher le message de chargement lorsque loading est true */}  
+                {/*{loading && <p>Loading...</p>} {/* Afficher le message de chargement lorsque loading est true */}  
+                {loading && <Loader />}
                 {result && (
                     <div>
                       <h1>{result}</h1>
@@ -85,7 +88,7 @@ function DivbdSearPRod() {
                   )}
             </div>
             
-        </div>
+        </div></div>
     )
 }
 

@@ -14,12 +14,14 @@ function DivContactComp() {
         event.preventDefault();
         let api_url = "http://127.0.0.1:8000/api/SendEmail";
         axios.post(api_url, formData)
+            
             .then((response) => {
                 alert(response.data.message);
             })
             .catch((error) => {
                 console.error("Error:", error);
             });
+            
         setFormData({
             username: '',
             email: '',

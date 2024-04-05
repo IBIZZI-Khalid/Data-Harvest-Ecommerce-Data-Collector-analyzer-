@@ -6,10 +6,7 @@ body {
   margin: 0; /* Remove default body margin */
   font-family: sans-serif; /* Set a base font family */
 }
-.homebody{
 
-  
-}
 .homebody1 {
   z-index: 1;
   position: fixed;
@@ -77,26 +74,22 @@ p {
 /* _______________________________________ */
 
 .result_content{
-  
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   z-index: 1;
   margin-top:  70px;
   padding: 50px ; /* Add padding to create space around the text */
   left: 0;
   width: auto;
   right: 0;
-  /* margin-left: auto;
-  margin-right: auto; */
-height: fit-content;
-overflow: auto;
+  height: fit-content;
+  overflow: auto;
   position: absolute;
   justify-content: center;
   align-items: center;
-background-color:blue;
+  background-color:rgb(0, 0, 0);
 
   font-family: "Lucida Sans Unicode";  color: #dfdfdf; /* Set the text color */
   /* Add any additional styles or animations as desired */
 
 
-}
-.amazon_data{
 }

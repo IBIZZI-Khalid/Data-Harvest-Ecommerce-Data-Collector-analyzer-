@@ -27,6 +27,7 @@ from  .Applications import SelectCommentAmaz as comm_amz
 from  .Applications import SelectCommentEbay as comm_ebay
 import subprocess
 import os
+from .scrappers import run_scrapers as ScrappersRunner
 
 class FormView(APIView):
     def get(self, request):
@@ -39,7 +40,7 @@ class FormView(APIView):
                 #dans ce block on a ajouter main function pour afficher les resultats de la recherche
                            
                 try:
-                    subprocess.run([r'C:\Users\hp\Desktop\PFE\DATA-HARVEST-master\backend\VirtualEnv\Scripts\python.exe', r'C:\Users\hp\Desktop\PFE\DATA-HARVEST-master\backend\data_scraping_amazonebay\testing_multithreading\runner.py'], check=True)
+                    ScrappersRunner.run()
                 except subprocess.CalledProcessError as e:
                     return JsonResponse({
                         "message": f"Erreur lors de l'exécution du script: {e}"
@@ -49,9 +50,11 @@ class FormView(APIView):
                 comm_amz.selectCommentsFromAmaz()
                 comm_exp.selectCommentsFromAliex()
                 comm_ebay.SelectCommentsFromEbay()
+
                 dataFromAmazon = ColAmaz.ReturnOneDocFromAmazon(0)
                 dataFromAliexpres = ColAliexp.ReturnOneDocFromAliExpres(0)
                 dataFromEbay = ColEbay.ReturnOneDocFromEbay(0)
+
                 listFunColl = [ColAmaz.ReturnOneDocFromAmazon, ColAliexp.ReturnOneDocFromAliExpres, ColEbay.ReturnOneDocFromEbay]
                 listCollectionsDB = [ColAmaz.collectiondb, ColAliexp.colaliexpress, ColEbay.collection]
                 for z, x in zip(listFunColl, listCollectionsDB):
@@ -59,6 +62,7 @@ class FormView(APIView):
                 dataFromAmazon = ColAmaz.ReturnOneDocFromAmazon(0)
                 dataFromAliexpres = ColAliexp.ReturnOneDocFromAliExpres(0)
                 dataFromEbay = ColEbay.ReturnOneDocFromEbay(0)
+
                 return JsonResponse({
                     "searchpro": searchpro,
                     "dataFromAmazon" : dataFromAmazon,
@@ -66,6 +70,7 @@ class FormView(APIView):
                     "dataFromEbay" : dataFromEbay,
                     "status": True,
                     "message": f"your product is {searchpro} are seved to database."
+                    
                 })
             else:
                 return JsonResponse({

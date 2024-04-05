@@ -6,11 +6,26 @@ import pprint
 collectiondb = db.mydb["amazon_product_collection"] 
 # collectiondb = mydb["scrapedatatestAmazon"] 
 
+#converter from inr to dollar
+def from_inr_to_dollar(prix):
+    prix = prix.replace(",", "")
+    if isinstance(prix, str):
+        try:
+            prix = float(prix)
+        except ValueError:
+            return None
+    tauxChange = 0.012
+    prixDollar = tauxChange * prix
+    return prixDollar
+
 def extract_data(document):
+    prix_inr = document.get("price", "")
+    prixDollar = from_inr_to_dollar(prix_inr)
     extracted_data = {
         "name": document.get("name", ""),
-        "image_table": document.get("images", []),
-        "price": document.get("price", ""),
+        # "image_table": list(document.get("img", [])),
+        #"price": document.get("price", ""),
+        "price" : prixDollar,
         "rating": document.get("rating", ""),
         "description": document.get("description", []),
         "un_separated_comments": document.get("un_separated_comments", []),
@@ -20,9 +35,13 @@ def extract_data(document):
     return extracted_data
 
 def extract_data_one(document):
+    prix_inr = document["price"] if "price" in document else "" 
+    prixDollar = from_inr_to_dollar(prix_inr)
     extracted_data = {
         "name": document["name"] if "name" in document else "",
-        "price": document["price"] if "price" in document else "",
+        #"price": document["price"] if "price" in document else "",
+        # "image_table": list(document["img"]) if "img" in document else [],
+        "price" : prixDollar,
         "rating": document["rating"] if "rating" in document else "",
         "description": document["description"] if "description" in document else [],
         "un_separated_comments": document["un_separated_comments"] if "un_separated_comments" in document else [],

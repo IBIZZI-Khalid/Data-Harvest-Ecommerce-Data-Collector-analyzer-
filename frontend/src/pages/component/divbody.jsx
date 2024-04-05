@@ -17,7 +17,7 @@ function Div_body(){
             </div>
             
             <div className="homebody2">
-                <h2>What's up ! </h2>
+                <h2>Hey ! </h2>
                 <div className="descrip">
                     <p>
                     An innovative platform! Our main goal is to provide users with an advanced search experience by allowing them to compare, choose, 

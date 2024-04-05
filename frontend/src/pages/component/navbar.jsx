@@ -20,30 +20,8 @@ function Navbar() {
           <label htmlFor="close-btn" className="btn close-btn"><i className="fas fa-times"></i></label>
           <li><a href="/">Home</a></li>
           <li><a href="/search_product">Test a product</a></li>
-          <li>
-            <a href="#" className="desktop-item">Dropdown Menu</a>
-            <input type="checkbox" id="showDrop" />
-            <label htmlFor="showDrop" className="mobile-item">Dropdown Menu</label>
-            <ul className="drop-menu">
-              <li><a href="#">Drop menu 1</a></li>
-              <li><a href="#">Drop menu 2</a></li>
-              <li><a href="#">Drop menu 3</a></li>
-              <li><a href="#">Drop menu 4</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="#" className="desktop-item">Mega Menu</a>
-            <input type="checkbox" id="showMega" />
-            <label htmlFor="showMega" className="mobile-item">Mega Menu</label>
-            <div className="mega-box">
-              <div className="content">
-                <div className="row">
-                  <img src="https://fadzrinmadu.github.io/hosted-assets/responsive-mega-menu-and-dropdown-menu-using-only-html-and-css/img.jpg" alt="" />
-                </div>
-                {/* Rest of your mega menu content */}
-              </div>
-            </div>
-          </li>
+          
+          
           <li><a href="/contact_us">Feedback</a></li>
         </ul>
         <label htmlFor="menu-btn" className="btn menu-btn"><i className="fas fa-bars"></i></label>
@@ -56,8 +34,23 @@ export default Navbar;
 
 
 // function Navbar(){
-
-
+{/* <li>
+            <a href="#" className="desktop-item">Mega Menu</a>
+            <input type="checkbox" id="showMega" />
+            <label htmlFor="showMega" className="mobile-item">Mega Menu</label>
+            <div className="mega-box">
+              <div className="content">
+                <div className="row">
+                  <img src="https://avatars.githubusercontent.com/u/128047189?v=4" alt="" />
+                  <div className="profile-links">
+                  <ul>
+                    <li><a href="#"><i class="fa fa-linkedin"></i> LinkedIn</a></li>
+                    <li><a href="#"><i class="fa fa-github"></i> Github</a></li>
+                    <li><a href="#"><i class="fa fa-instagram"></i> Instagram</a></li>
+                  </ul> </div>
+                </div>
+                {/* Rest of your mega menu content */}
+              
     
 
 //     return(

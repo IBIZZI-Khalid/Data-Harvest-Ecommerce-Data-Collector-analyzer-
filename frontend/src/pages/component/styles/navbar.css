@@ -92,7 +92,6 @@ nav .wrapper{
 .mega-box .content{
   background: #242526d4;
   backdrop-filter: blur(10px); /* Adjust the blur amount as needed */
-
   padding: 25px 20px;
   display: flex;
   width: 100%;
