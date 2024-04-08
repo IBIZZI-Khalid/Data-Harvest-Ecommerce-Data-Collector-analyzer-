@@ -1,3 +1,23 @@
+
+Project Name : Data Harvest
+
+Description :
+Data Harvest is a web-based application designed to collect, analyze, and visualize data from various e-commerce platforms such as Amazon, eBay, and AliExpress. The application allows users to search for products and retrieve relevant information such as product details, reviews, and pricing data. It leverages web scraping techniques to gather data in real-time, providing users with valuable insights to inform their purchasing decisions. With an intuitive user interface and powerful backend processing, Data Harvest simplifies the process of gathering and analyzing e-commerce data.
+
+Key Features :
+-Search for products across multiple e-commerce platforms.
+-Retrieve product details, reviews, and pricing information.
+-Real-time data collection using web scraping techniques.
+-Intuitive user interface for easy navigation and interaction.
+-Backend processing for data analysis and visualization.
+
+Getting Started:
+To get started with Data Harvest, simply clone the repository and modify the paths for example the ones included in the scrapping scripts (\backend\api\scrappers)   
+
+Contributing
+We welcome contributions from the community! If you'd like to contribute to Data Harvest .
+
+
 pip install 
 appdirs==1.4.4 
 asgiref==3.8.1 
@@ -30,8 +50,8 @@ ipykernel==6.29.2
 ipython==8.21.0 
 itsdangerous==2.1.2 
 jedi==0.19.1
- Jinja2==3.1.3
-  joblib==1.3.2
+Jinja2==3.1.3
+joblib==1.3.2
    jupyter_client==8.6.0 
    jupyter_core==5.7.1 
    kiwisolver==1.4.5 
@@ -43,12 +63,10 @@ jedi==0.19.1
 
 
 to run the back end part :
-
-PFE> cd DATA-HARVEST-master\backend
 backend> Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 backend> VirtualEnv\Scripts\activate
 (VirtualEnv) py manage.py runserver
 
 _____________________________________________________________________
 To run the front end part:
-npm run dev
+frontend> npm run dev
