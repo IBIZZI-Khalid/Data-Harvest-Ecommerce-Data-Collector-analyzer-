@@ -51,3 +51,4 @@ backend> VirtualEnv\Scripts\activate
 
 _____________________________________________________________________
 To run the front end part:
+npm run dev
