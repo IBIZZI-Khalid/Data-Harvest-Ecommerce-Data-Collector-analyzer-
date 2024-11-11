@@ -1,29 +1,40 @@
+Data Harvest: Make Informed Purchases with AI-Powered Reviews 
 
-Project Name : Data Harvest
+Data Harvest empowers you to make smarter shopping decisions by analyzing product reviews from major e-commerce platforms like Amazon, eBay, and AliExpress. Simply enter a product name to access:
 
-Description :
-Data Harvest is a web-based application designed to collect, analyze, and visualize data from various e-commerce platforms such as Amazon, eBay, and AliExpress. The application allows users to search for products and retrieve relevant information such as product details, reviews, and pricing data. It leverages web scraping techniques to gather data in real-time, providing users with valuable insights to inform their purchasing decisions. With an intuitive user interface and powerful backend processing, Data Harvest simplifies the process of gathering and analyzing e-commerce data.
+Detailed product information
+Sentiment analysis of customer reviews
+Identification of key pros and cons
 
-Key Features :
--Search for products across multiple e-commerce platforms.
--Retrieve product details, reviews, and pricing information.
--Real-time data collection using web scraping techniques.
--Intuitive user interface for easy navigation and interaction.
--Backend processing for data analysis and visualization.
+This user-friendly tool utilizes web scraping and natural language processing to bring you real-time data and valuable insights. Built with React.js, Django, and MongoDB, Data Harvest provides a seamless experience to help you choose the right product with confidence.
+
+Key Features:
+
+Multi-Platform Search: Find products across various e-commerce sites.
+Comprehensive Data: Access product details, reviews, and pricing in one place.
+Real-Time Updates: Get the latest information with cutting-edge scraping techniques.
+Intuitive Interface: Navigate and interact with ease using our user-friendly design.
+Advanced Analysis: Gain deeper insights through backend processing and visualization.
 
 Getting Started:
-To get started with Data Harvest, simply clone the repository and modify the paths for example the ones included in the scrapping scripts (\backend\api\scrappers)   
 
-Contributing
-We welcome contributions from the community! If you'd like to contribute to Data Harvest .
+For easy setup, simply clone the Data Harvest repository and modify the scraping script paths (located in `backend\api\scrappers`).
 
+Contributing:
 
-_____________________________________________________________________
+We value your input! Feel free to contribute to Data Harvest and be part of our growing community.
 
-to run the back end part :
-backend> Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
-backend> VirtualEnv\Scripts\activate
-(VirtualEnv) py manage.py runserver
+Running the Project:
 
-To run the front end part:
-frontend> npm run dev
+Backend:
+
+1. Open a terminal in the `backend` directory.
+2. Set execution policy (Windows only): `Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass`
+3. Activate virtual environment: `VirtualEnv\Scripts\activate`
+4. Run server: `(VirtualEnv) py manage.py runserver`
+
+Frontend:
+
+1. Open a terminal in the `frontend` directory.
+2. Install dependencies: `npm install`
+3. Start development server: `npm run dev`
